@@ -54,10 +54,10 @@ namespace TiledConverter
             {
                 try
                 {
-                    m_width = map.width;
-                    m_height = map.height;
-                    m_tileWidth = map.tilewidth;
-                    m_tileHeight = map.tileheight;
+                    m_width = (byte)map.width;
+                    m_height = (byte)map.height;
+                    m_tileWidth = (byte)map.tilewidth;
+                    m_tileHeight = (byte)map.tileheight;
                     m_imgFilePath = imgFilePath;
 
                     int[] staticLayer = map.layers[0].data;
@@ -161,10 +161,10 @@ namespace TiledConverter
                 File.WriteAllText($"{dir}\\{fileName}.txt", file, Encoding.ASCII);
             }
 
-            public int m_width;
-            public int m_height;
-            public int m_tileWidth;
-            public int m_tileHeight;
+            public byte m_width;
+            public byte m_height;
+            public byte m_tileWidth;
+            public byte m_tileHeight;
             public char[] m_data;
             public string m_imgFilePath;
         }
